@@ -1,8 +1,8 @@
 .organization {
   background: linear-gradient(
     to right bottom,
-    rgba($color-primary, 0.95),
-    rgba($color-primary-dark, 0.9)
+    rgba($color-secondary, 0.75),
+    rgba($color-secondary-dark, 0.9)
   );
   grid-column: col-start 7 / full-end;
   padding: 1.5rem;
@@ -11,16 +11,29 @@
   align-content: center;
   justify-content: center;
 
+  @media only screen and (max-width: $bp-medium) {
+    grid-column: 1/-1;
+  }
+
   &__list {
     display: grid;
     grid-template-columns: min-content max-content;
-    grid-column-gap: 2rem;
+    grid-column-gap: 1rem;
     grid-row-gap: 5vh;
     align-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-template-columns: repeat(3, min-content max-content);
+      grid-column-gap: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      grid-template-columns: min-content max-content;
+    }
   }
 
   &__img {
-    width: 7.5rem;
+    width: 6.5rem;
     border-radius: 50%;
     display: block;
   }

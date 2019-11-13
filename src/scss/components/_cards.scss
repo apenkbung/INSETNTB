@@ -1,4 +1,13 @@
 .card {
+  float: left;
+  width: 33.3333%;
+  margin-bottom: 6rem;
+
+  @supports (display: grid) {
+    width: auto;
+    margin-bottom: 0;
+  }
+
   display: grid;
   grid-template-columns: min-content 1fr;
   grid-column-gap: 2rem;

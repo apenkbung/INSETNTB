@@ -4,17 +4,17 @@
 
   display: grid;
   grid-template-rows: min-content 1fr;
-  grid-gap: 6rem;
+  grid-row-gap: 3rem;
 
   &__title {
-    grid-row: 1/1;
+    grid-row: 1 / 2;
   }
 
   &__content {
-    grid-row: 2/2;
+    grid-row: 2 / 3;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    grid-gap: 5rem;
+    grid-gap: 7rem;
   }
 }
 
