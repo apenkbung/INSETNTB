@@ -1,0 +1,14 @@
+{
+  "name": "insetntb",
+  "version": "1.0.0",
+  "description": "Website Yayasan INSET NTB",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass src/scss/main.scss -o dist/style/style.css -w"
+  },
+  "author": "Yayasan INSET NTB",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.13.0"
+  }
+}

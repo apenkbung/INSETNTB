@@ -1,0 +1,16 @@
+.card {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-column-gap: 2rem;
+
+  &__icon {
+    fill: $color-primary;
+    width: 4.5rem;
+    height: 4.5rem;
+    grid-row: 1 / span 2;
+  }
+
+  &__text {
+    font-size: 1.7rem;
+  }
+}

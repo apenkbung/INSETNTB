@@ -1,0 +1,50 @@
+.documents {
+  grid-column: center-start / center-end;
+  margin-bottom: 15rem;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(
+      12,
+      [doc-start] minmax(min-content, 1fr) [doc-end]
+    );
+
+    &--card {
+      grid-column: doc-start 2 / doc-end 7;
+    }
+    &--description {
+      margin-left: 10rem;
+      grid-column: doc-start 8 / doc-end 11;
+    }
+  }
+}
+
+.document {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+
+  &__icon-pdf {
+    fill: $color-primary;
+    width: 10rem;
+    height: 10rem;
+    margin-right: 2rem;
+    grid-row: 1 / span 2;
+  }
+
+  &__text {
+    & > *:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__icon {
+    margin-right: 2rem;
+  }
+
+  &__description {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}

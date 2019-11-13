@@ -1,0 +1,32 @@
+.organization {
+  background: linear-gradient(
+    to right bottom,
+    rgba($color-primary, 0.95),
+    rgba($color-primary-dark, 0.9)
+  );
+  grid-column: col-start 7 / full-end;
+  padding: 1.5rem;
+
+  display: grid;
+  align-content: center;
+  justify-content: center;
+
+  &__list {
+    display: grid;
+    grid-template-columns: min-content max-content;
+    grid-column-gap: 2rem;
+    grid-row-gap: 5vh;
+    align-items: center;
+  }
+
+  &__img {
+    width: 7.5rem;
+    border-radius: 50%;
+    display: block;
+  }
+
+  &__position {
+    margin-top: -3px;
+    color: $color-white;
+  }
+}
