@@ -22,10 +22,18 @@
 
   &__download {
     grid-column: doc-start 1 / doc-end 6;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: 1/-1;
+    }
   }
 
   &__category {
     grid-column: doc-start 7 / doc-end 8;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: 1/-1;
+    }
   }
 
   &__list {

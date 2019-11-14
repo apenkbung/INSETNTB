@@ -280,8 +280,14 @@ body {
     border-bottom: 3px solid #d32f2f; }
   .documents__download {
     grid-column: doc-start 1 / doc-end 6; }
+    @media only screen and (max-width: 50em) {
+      .documents__download {
+        grid-column: 1/-1; } }
   .documents__category {
     grid-column: doc-start 7 / doc-end 8; }
+    @media only screen and (max-width: 50em) {
+      .documents__category {
+        grid-column: 1/-1; } }
   .documents__list {
     list-style: none; }
   .documents__item {
