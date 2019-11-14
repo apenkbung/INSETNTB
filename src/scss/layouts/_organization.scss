@@ -1,9 +1,5 @@
 .organization {
-  background: linear-gradient(
-    to right bottom,
-    rgba($color-secondary, 0.75),
-    rgba($color-secondary-dark, 0.9)
-  );
+  background: $color-primary;
   grid-column: col-start 7 / full-end;
   padding: 1.5rem;
 

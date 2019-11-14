@@ -2,20 +2,54 @@
   grid-column: center-start / center-end;
   margin-bottom: 15rem;
 
+  display: grid;
+
   &__container {
     display: grid;
     grid-template-columns: repeat(
-      12,
-      [doc-start] minmax(min-content, 1fr) [doc-end]
+      8,
+      [doc-start] minmax(min-content, 14rem) [doc-end]
     );
+    padding: 1rem 5rem;
+    grid-gap: 3rem;
+  }
 
-    &--card {
-      grid-column: doc-start 2 / doc-end 7;
+  &__heading {
+    width: auto;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid $color-primary;
+  }
+
+  &__download {
+    grid-column: doc-start 1 / doc-end 6;
+  }
+
+  &__category {
+    grid-column: doc-start 7 / doc-end 8;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    margin: 1rem 0;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-grey-dark-3;
+    border-bottom: 1px dotted $color-grey-dark-1;
+    transition: all 0.2s;
+
+    &:hover {
+      color: $color-primary-dark;
+      font-weight: 400;
     }
-    &--description {
-      margin-left: 10rem;
-      grid-column: doc-start 8 / doc-end 11;
-    }
+  }
+
+  &__btn {
+    margin-top: 2rem;
   }
 }
 

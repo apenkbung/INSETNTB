@@ -35,7 +35,7 @@ body {
 .container {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
-  grid-template-columns: [sidebar-start] 6rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
   @media only screen and (max-width: 62.5em) {
     .container {
       grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
@@ -157,7 +157,7 @@ body {
       max-width: 100%; }
 
 .organization {
-  background: linear-gradient(to right bottom, rgba(255, 143, 0, 0.75), rgba(197, 96, 0, 0.9));
+  background: #d32f2f;
   grid-column: col-start 7 / full-end;
   padding: 1.5rem;
   display: grid;
@@ -267,15 +267,35 @@ body {
 
 .documents {
   grid-column: center-start / center-end;
-  margin-bottom: 15rem; }
+  margin-bottom: 15rem;
+  display: grid; }
   .documents__container {
     display: grid;
-    grid-template-columns: repeat(12, [doc-start] minmax(min-content, 1fr) [doc-end]); }
-    .documents__container--card {
-      grid-column: doc-start 2 / doc-end 7; }
-    .documents__container--description {
-      margin-left: 10rem;
-      grid-column: doc-start 8 / doc-end 11; }
+    grid-template-columns: repeat(8, [doc-start] minmax(min-content, 14rem) [doc-end]);
+    padding: 1rem 5rem;
+    grid-gap: 3rem; }
+  .documents__heading {
+    width: auto;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid #d32f2f; }
+  .documents__download {
+    grid-column: doc-start 1 / doc-end 6; }
+  .documents__category {
+    grid-column: doc-start 7 / doc-end 8; }
+  .documents__list {
+    list-style: none; }
+  .documents__item {
+    margin: 1rem 0; }
+  .documents__link {
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px dotted #777;
+    transition: all 0.2s; }
+    .documents__link:hover {
+      color: #9a0007;
+      font-weight: 400; }
+  .documents__btn {
+    margin-top: 2rem; }
 
 .document {
   display: grid;
